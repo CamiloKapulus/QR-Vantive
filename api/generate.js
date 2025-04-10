@@ -1,8 +1,6 @@
 const puppeteer = require("puppeteer");
-const express = require("express");
-const app = express();
 
-app.get("/api/generar", async (req, res) => {
+module.exports = async (req, res) => {
   const qrUrl = req.query.qr;
 
   if (!qrUrl) {
@@ -55,8 +53,7 @@ app.get("/api/generar", async (req, res) => {
   const image = await page.screenshot({ type: "png" });
   await browser.close();
 
-  res.set("Content-Type", "image/png");
+  res.setHeader("Content-Type", "image/png");
   res.send(image);
-});
+};
 
-module.exports = app;

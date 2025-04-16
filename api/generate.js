@@ -18,9 +18,9 @@ module.exports = async (req, res) => {
           }
           .container {
             position: relative;
-            width: 589px;
-            height: 1557px;
-            background-image: url('https://i.imgur.com/LvIHTZL.jpeg');
+            width: 1210px;
+            height: 678px;
+            background-image: url('https://i.imgur.com/iGJYFK9.jpeg');
             background-size: cover;
             background-position: center;
           }
